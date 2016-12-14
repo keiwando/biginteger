@@ -1,5 +1,5 @@
 # biginteger
-A C# BigInteger implementation based on the BigInteger class by ScottGarland (http://biginteger.codeplex.com).
+A C# BigInteger implementation based on the <a href="http://biginteger.codeplex.com"> BigInteger </a> class by ScottGarland ().
 
 This class can be used in Unity, since the System.Numerics is not available there.
 
