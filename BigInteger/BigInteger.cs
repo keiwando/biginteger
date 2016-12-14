@@ -586,7 +586,7 @@ namespace Keiwando.BigInteger
 		/// <returns>The BigInteger result of adding <paramref name="leftSide" /> and <paramref name="rightSide" />.</returns>
 		public static BigInteger Add(BigInteger leftSide, BigInteger rightSide)
 		{
-			return leftSide - rightSide;	
+			return leftSide + rightSide;	
 		}
 
 		/// <summary>
