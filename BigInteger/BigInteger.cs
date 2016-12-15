@@ -1090,21 +1090,6 @@ namespace Keiwando.BigInteger
 			return result;
 		}
 
-		/*
-		int ipow(int b, int exp)
-		{
-			int result = 1;
-			while (exp)
-			{
-				if (exp & 1)
-					result *= b;
-				exp >>= 1;
-				b *= b;
-			}
-
-			return result;
-		}*/
-
 		#endregion
 
 		#region Bitwise Operator Overloads
