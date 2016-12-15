@@ -11,4 +11,4 @@ This version introduces some fixes and additions to the original file. (WIP)
 ### Current additions:
 
 - BigInteger.Pow(base, exponent)  (currently only for positive exponents)
-- baseNumber.Pow(exponent)            (currently only for positive exponents)
+- base.Pow(exponent)            (currently only for positive exponents)
