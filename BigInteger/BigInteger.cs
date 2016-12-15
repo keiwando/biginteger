@@ -108,6 +108,15 @@ namespace Keiwando.BigInteger
 			get { return (m_data[m_data.Length - 1] & HiBitSet) == HiBitSet; }
 		}
 
+		internal string GetDataAsString()
+		{
+			string result = "";
+			foreach (DType data in m_data) {
+				result += data + " ";
+			}
+			return result;
+		}
+
 		internal void ResetDataUsed()
 		{
 			m_dataUsed = m_data.Length;
@@ -1039,6 +1048,63 @@ namespace Keiwando.BigInteger
 		{
 			return leftSide % rightSide;
 		}
+
+		#endregion
+
+		#region Exponentiation
+
+		public BigInteger Pow(BigInteger power) {
+			return Pow (this, power);
+		}
+
+		/// <summary>
+		/// Returns a base number raised to a specified power. Currently only positive (>= 0) 
+		/// exponents allowed.
+		/// </summary>
+		/// <param name="b">A BigInteger to be raised to a power.</param>
+		/// <param name="power">A BigInteger that specifies the power.</param>
+		public static BigInteger Pow(BigInteger b, BigInteger power) {
+
+			if (b == null) {
+				throw new ArgumentNullException ("b");
+			}
+
+			if (power == null) {
+				throw new ArgumentNullException("power");
+			}
+
+			if (power < 0) {
+				throw new ArgumentOutOfRangeException ("power", "Currently negative exponents are not supported");
+			}
+
+
+			BigInteger result = 1;
+			while (power != 0) {
+
+				if ((power & 1) != 0)
+					result *= b;
+				power >>= 1;
+				b *= b;
+			}
+
+			return result;
+		}
+
+		/*
+		int ipow(int b, int exp)
+		{
+			int result = 1;
+			while (exp)
+			{
+				if (exp & 1)
+					result *= b;
+				exp >>= 1;
+				b *= b;
+			}
+
+			return result;
+		}*/
+
 		#endregion
 
 		#region Bitwise Operator Overloads
@@ -1401,6 +1467,14 @@ namespace Keiwando.BigInteger
 		public override int GetHashCode()
 		{
 			return this.m_digits.GetHashCode();
+		}
+
+		/// <summary>
+		///  Returns the array entries as a string. Used for debugging.
+		/// </summary>
+		/// <returns>The data as string.</returns>
+		public string GetDataAsString() {
+			return this.m_digits.GetDataAsString ();
 		}
 
 		/// <summary>

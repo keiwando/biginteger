@@ -1,1 +1,13 @@
-﻿<Properties StartupItem="BigInteger/BigInteger.csproj" />
+﻿<Properties StartupItem="BigInteger/BigInteger.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BigInteger/BigInteger.cs">
+    <Files>
+      <File FileName="BigInteger/BigIntegerTest.cs" Line="17" Column="47" />
+      <File FileName="BigInteger/BigInteger.cs" Line="92" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
