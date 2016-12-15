@@ -6,8 +6,9 @@ This class can be used in Unity, since the <a href="https://msdn.microsoft.com/e
 This version introduces some fixes and additions to the original file. (WIP)
 ### Current fixes:
 
-BigInteger.Add(..) was originally subtracting the numbers
+- BigInteger.Add(..) was originally subtracting the numbers
 
 ### Current additions:
 
-WIP
+- BigInteger.Pow(base, exponent)  (currently only for positive exponents)
+- instance.Pow(exponent)            (currently only for positive exponents)
