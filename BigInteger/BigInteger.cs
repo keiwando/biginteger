@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 /** Based on BigInteger.cs by ScottGarland from http://biginteger.codeplex.com/ */
-namespace Keiwando.BigInteger
+namespace ScottGarland
 {
 	using DType = System.UInt32; // This could be UInt32, UInt16 or Byte; not UInt64.
 
@@ -28,7 +28,7 @@ namespace Keiwando.BigInteger
 
 		internal DigitsArray(DigitsArray copyFrom)
 		{
-			Allocate(copyFrom.Count, copyFrom.DataUsed);
+			Allocate(copyFrom.Count - 1, copyFrom.DataUsed);
 			Array.Copy(copyFrom.m_data, 0, m_data, 0, copyFrom.Count);
 		}
 
@@ -235,6 +235,8 @@ namespace Keiwando.BigInteger
 
 		internal int ShiftLeftWithoutOverflow(int shiftCount)
 		{
+			if (shiftCount == 0) return m_data.Length;
+
 			List<DType> temporary = new List<DType>(m_data);
 			int shiftAmount = DigitsArray.DataSizeBits;
 
@@ -255,10 +257,16 @@ namespace Keiwando.BigInteger
 					carry = (val >> DigitsArray.DataSizeBits);
 				}
 
-				if (carry != 0)
+				if (carry != 0) 
 				{
-					temporary.Add(0);
-					temporary[temporary.Count - 1] = (DType)carry;
+					DType lastNum = (DType)carry;
+					if (IsNegative) 
+					{
+						int byteCount = (int)Math.Floor(Math.Log(carry, 2));
+						lastNum = (0xffffffff << byteCount) | (DType)carry;
+					}
+
+					temporary.Add(lastNum);
 				}
 			}
 			m_data = new DType[temporary.Count];

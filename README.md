@@ -7,6 +7,7 @@ This version introduces some fixes and additions to the original file. (WIP)
 ### Current fixes:
 
 - BigInteger.Add(..) was originally subtracting the numbers
+- Fixed the LeftShift operator (<<) to work correctly with negative numbers and Two's complement.
 
 ### Current additions:
 

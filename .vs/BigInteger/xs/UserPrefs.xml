@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{EAE951E7-1339-4456-9318-EAAC123C2761}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BigInteger/BigInteger.cs">
+    <Files>
+      <File FileName="BigInteger/BigIntegerTest.cs" Line="24" Column="15" />
+      <File FileName="BigInteger/BigInteger.cs" Line="1177" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BigInteger PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
