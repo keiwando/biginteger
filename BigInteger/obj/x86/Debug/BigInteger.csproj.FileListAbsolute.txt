@@ -1,6 +1,0 @@
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/obj/x86/Debug/BigInteger.csprojResolveAssemblyReference.cache
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/obj/x86/Debug/BigInteger.csproj.CoreCompileInputs.cache
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/obj/x86/Debug/BigInteger.exe
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/bin/Debug/BigInteger.exe
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/bin/Debug/BigInteger.pdb
-/Users/Keiwan/Documents/C#/BigInteger/BigInteger/obj/x86/Debug/BigInteger.pdb
