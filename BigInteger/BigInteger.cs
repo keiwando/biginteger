@@ -139,6 +139,7 @@ namespace ScottGarland
 					m_dataUsed = 1;
 				}
 			}
+			m_dataUsed = System.Math.Min(m_data.Length, m_dataUsed);
 		}
 
 		internal int ShiftRight(int shiftCount)
